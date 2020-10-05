@@ -1,0 +1,42 @@
+GET http://localhost:8080/health
+###
+GET http://localhost:8080/systems/list
+###
+POST http://localhost:8080/systems/add
+content-type: application/json
+
+{
+    "hostname": "h1",
+    "lastboot": "2020-01-01T19:01",
+    "timestamp": "2020-01-01T20:01",
+    "serial": "serial1",
+    "mac": "111111111111",
+    "primaryIPv4Address": "192.168.66.1",
+    "fqdn": "h1.fleckerlteppich.frickeldave.de"
+}
+###
+POST http://localhost:8080/systems/add
+content-type: application/json
+
+{
+    "hostname": "h2",
+    "lastboot": "2020-01-02T19:02",
+    "timestamp": "2020-01-02T20:02",
+    "serial": "serial2",
+    "mac": "222222222222",
+    "primaryIPv4Address": "192.168.66.2",
+    "fqdn": "h2.fleckerlteppich.frickeldave.de"
+}
+###
+POST http://localhost:8080/systems/add
+content-type: application/json
+
+{
+    "hostname": "h3",
+    "lastboot": "2020-01-01T19:03",
+    "timestamp": "2020-01-01T20:03",
+    "serial": "serial3",
+    "mac": "333333333333",
+    "primaryIPv4Address": "192.168.66.3",
+    "fqdn": "h3.fleckerlteppich.frickeldave.de"
+}
